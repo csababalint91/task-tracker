@@ -1,6 +1,29 @@
-# Getting Started with Create React App
+# To start the project
+Clone this repo, `cd` into it and run
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+`npm install`
+
+from the terminal to install dependencies listed in package.json.
+
+Once all packages are installed you can run
+
+`npm start`
+
+The app will run on the following url: http://localhost:3000.
+
+# The following has been built or done for this project
+
+Task tracker app.
+  - tasks can be added
+  - tasks can be removed 
+  - tasks can be marked with 'reminder' label when created
+  - tasks saved on Local Storage
+
+## Some things that could be improved or added
+- date validation could be added
+- an alert for reminder could be added too
+
+## This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
