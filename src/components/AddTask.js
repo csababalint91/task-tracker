@@ -7,13 +7,7 @@ function AddTask({ task, onAdd }) {
 
     const onSubmit = (e) => {
         e.preventDefault()
-        if (!text) {
-            alert('Please Add Task')
-            return
-        }
-
         onAdd({ text, day, reminder })
-
         setText('');
         setDay('');
         setReminder(false);
@@ -27,9 +21,10 @@ function AddTask({ task, onAdd }) {
                     type='text'
                     placeholder='Add Task'
                     value={text}
-                    onChange={(e) => setText(e.target.value)} />
+                    onChange={(e) => setText(e.target.value)}
+                    required
+                />
             </div>
-
             <div className='form-control' >
                 <label>Day and Time</label>
                 <input
@@ -38,7 +33,6 @@ function AddTask({ task, onAdd }) {
                     value={day}
                     onChange={(e) => setDay(e.target.value)} />
             </div>
-
             <div className='form-control form-control-check' >
                 <label>Reminder</label>
                 <input
@@ -47,7 +41,6 @@ function AddTask({ task, onAdd }) {
                     checked={reminder}
                     onChange={(e) => setReminder(e.currentTarget.checked)} />
             </div>
-
             <input
                 type='submit'
                 value='Save Task'
